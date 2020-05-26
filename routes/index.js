@@ -17,10 +17,14 @@ router.post('/', function (req, res, next) {
 
   request.get(url, function( err, response, body) {
     if(err){
-      res.render('thankyou', { ticketNumber: -1 });
+      //res.render('thankyou', { ticketNumber: -1 });
+      res.render('thankyou', { ticketNumber: 'testing' });
     } else {
-      let ticketInfo = JSON.parse(body);
-      res.render('thankyou', { ticketNumber: ticketInfo.result, order: ticketInfo.order });
+      //let ticketInfo = JSON.parse(body);
+      //res.render('thankyou', { ticketNumber: ticketInfo.result, order: ticketInfo.order });
+
+      var ticketInfo = JSON.parse(body);
+      res.render('thankyou', { ticketNumber: 'testing', order: 'testing' });
       //res.render('thankyou');
     }
   });

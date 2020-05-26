@@ -8,11 +8,19 @@
     <h1>Concession Kiosk - Thank You</h1>
     <div>
       <p>
-        Your order number is: 100
+        Your order number is: <% if (ticketNumber) { %>
+        <%= ticketNumber %> 
+        <% } %>
     </p>
     </div>
     <div>
-      Your order contains: A lot of stuff
+      Your order contains: <% if (order) { %>
+      <p>Hotdogs: <%= order.hotdog %></p>
+      <p>Hamburgers: <%= order.hamburger %></p>
+      <p>Salads: <%= order.salad %></p>
+      <p>Pizzas: <%= order.pizza %></p>
+      <p>Sodas: <%= order.soda %></p>  
+      <% } %>  
     </div>
 
   </body>
