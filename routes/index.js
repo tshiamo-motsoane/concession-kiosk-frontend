@@ -19,9 +19,9 @@ router.post('/', function (req, res, next) {
     if(err){
       res.render('thankyou', { ticketNumber: -1 });
     } else {
-      var ticketInfo = JSON.parse(body);
-      res.render('thankyou', { ticketNumber: ticketInfo.result, order: ticketInfo.order  });
-      
+      //let ticketInfo = JSON.parse(body);
+      //res.render('thankyou', { ticketNumber: ticketInfo.result, order: ticketInfo.order  });
+      res.render ('Order received')
     }
   });
 });
